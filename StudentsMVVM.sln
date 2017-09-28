@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DesktopClient", "DesktopCli
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{000BCA52-5031-48E1-9D37-1ED74B5AC9D9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentsMVVM.Windows", "StudentsMVVM.Windows\StudentsMVVM.Windows.csproj", "{F21EFA1E-4544-49EF-8E5F-E84D2B3B760E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentsMVVM.Windows.Tests", "StudentsMVVM.Windows.Tests\StudentsMVVM.Windows.Tests.csproj", "{C29F8661-5A90-4736-A7EB-7D7F4597AEBE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,14 @@ Global
 		{E46AA2C1-5E79-4D8A-8BB7-99523635E1F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E46AA2C1-5E79-4D8A-8BB7-99523635E1F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E46AA2C1-5E79-4D8A-8BB7-99523635E1F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F21EFA1E-4544-49EF-8E5F-E84D2B3B760E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F21EFA1E-4544-49EF-8E5F-E84D2B3B760E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F21EFA1E-4544-49EF-8E5F-E84D2B3B760E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F21EFA1E-4544-49EF-8E5F-E84D2B3B760E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C29F8661-5A90-4736-A7EB-7D7F4597AEBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C29F8661-5A90-4736-A7EB-7D7F4597AEBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C29F8661-5A90-4736-A7EB-7D7F4597AEBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C29F8661-5A90-4736-A7EB-7D7F4597AEBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,5 +44,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{078BC0E0-C657-4D23-9EE5-CE2C021F771C} = {5CFA76DE-B40F-4590-BC2F-2BD4598CB6A5}
 		{E46AA2C1-5E79-4D8A-8BB7-99523635E1F9} = {000BCA52-5031-48E1-9D37-1ED74B5AC9D9}
+		{F21EFA1E-4544-49EF-8E5F-E84D2B3B760E} = {5CFA76DE-B40F-4590-BC2F-2BD4598CB6A5}
+		{C29F8661-5A90-4736-A7EB-7D7F4597AEBE} = {000BCA52-5031-48E1-9D37-1ED74B5AC9D9}
 	EndGlobalSection
 EndGlobal
