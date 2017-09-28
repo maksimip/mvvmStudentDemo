@@ -72,5 +72,10 @@ namespace StudentsMVVM.Data
             xDoc.Save(xmlFilePath);
           
         }
+
+        public void Test()
+        {
+            
+        }
     }
 }
