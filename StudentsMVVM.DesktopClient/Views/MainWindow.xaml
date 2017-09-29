@@ -1,15 +1,15 @@
-﻿<Window x:Class="StudentsMVVM.DesktopClient.MainWindow"
+﻿<Window x:Class="StudentsMVVM.DesktopClient.Views.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:StudentsMVVM.DesktopClient"
-        xmlns:data="clr-namespace:StudentsMVVM.Data;assembly=StudentsMVVM.Data"
+        xmlns:local="clr-namespace:StudentsMVVM.DesktopClient.Views"
         mc:Ignorable="d"
-        d:DataContext="{d:DesignInstance viewModels:MainViewModel}"
+        d:DataContext="{d:DesignInstance viewModels:MainViewModel, d:IsDesignTimeCreatable=true}"
+        xmlns:data="clr-namespace:StudentsMVVM.Data;assembly=StudentsMVVM.Data"
         xmlns:viewModels="clr-namespace:StudentsMVVM.DesktopClient.ViewModels"
-        
-        Title="MainWindow" Height="350" Width="525">
+        xmlns:windows="clr-namespace:StudentsMVVM.Windows;assembly=StudentsMVVM.Windows"
+        Title="MainWindow" Height="297.595" Width="520.103">
 
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="VisibilityConverter"/>
@@ -17,10 +17,10 @@
             <Setter Property="Padding" Value="0"/>
         </Style>
     </Window.Resources>
-    
+
     <DockPanel Margin="10">
         <DockPanel>
-            <ListView ItemsSource="{Binding Path=Students}">
+            <ListView ItemsSource="{Binding Students}">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Id}"></GridViewColumn>
@@ -32,6 +32,10 @@
                 </ListView.View>
             </ListView>
         </DockPanel>
-        <StackPanel DockPanel.Dock="Right"></StackPanel>
+        <StackPanel DockPanel.Dock="Right">
+            <TextBlock DockPanel.Dock="Top">
+                <Hyperlink Command="{Binding GetStudentListCommand}">Refresh</Hyperlink>
+            </TextBlock>
+        </StackPanel>
     </DockPanel>
 </Window>

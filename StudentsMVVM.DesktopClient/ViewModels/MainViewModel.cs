@@ -3,6 +3,8 @@ using StudentsMVVM.Data;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +12,7 @@ using System.Windows.Input;
 
 namespace StudentsMVVM.DesktopClient.ViewModels
 {
+    
     public class MainViewModel : ViewModel
     {
         private readonly StudentsContext context;
@@ -17,13 +20,14 @@ namespace StudentsMVVM.DesktopClient.ViewModels
 
         public MainViewModel() : this(new StudentsContext())
         {
-            
+
         }
 
         public MainViewModel(StudentsContext context)
         {
             Students = new ObservableCollection<Student>();
             this.context = context;
+            GetStudentListCommand.Execute(null);
         }
 
         public bool CanModify
